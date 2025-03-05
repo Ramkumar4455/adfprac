@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Ram007"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_password": {
+			"value": ""
+		},
+		"Wedconnec_connectionString": {
+			"value": ""
+		},
+		"simpleforeachblobstorage_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "ramserver007.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "Ramdatabase"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "Ramkumar4455"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "wedserver.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "Ramdatabase"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "Ramkumar4455"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_server": {
+			"value": "ramserver007.database.windows.net"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_database": {
+			"value": "Ramdatabase"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_userName": {
+			"value": "Ramkumar4455"
+		}
+	}
+}
