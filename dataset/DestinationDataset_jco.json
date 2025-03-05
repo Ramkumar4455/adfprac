@@ -1,0 +1,16 @@
+{
+	"name": "DestinationDataset_jco",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "retail_sales_dataset-_1_"
+		}
+	}
+}
