@@ -1,0 +1,22 @@
+{
+	"name": "DestinationDataset_48d",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Wedconnec",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "reccontwed"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
