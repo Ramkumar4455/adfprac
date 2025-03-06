@@ -273,7 +273,10 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "stage",
+					"schema": {
+						"value": "@dataset().sinkvar",
+						"type": "Expression"
+					},
 					"table": {
 						"value": "@dataset().sinkvar",
 						"type": "Expression"
