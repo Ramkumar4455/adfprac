@@ -5,11 +5,20 @@
 			"referenceName": "simpleforeachblobstorage",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"sourcevar": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().sourcevar",
+					"type": "Expression"
+				},
 				"container": "containerpracwed"
 			},
 			"columnDelimiter": ",",

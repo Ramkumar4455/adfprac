@@ -5,12 +5,20 @@
 			"referenceName": "AzureSqlDatabase3",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"sinkvar": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "retail_sales_dataset-_1_"
+			"table": {
+				"value": "@dataset().sinkvar",
+				"type": "Expression"
+			}
 		}
 	}
 }
