@@ -85,8 +85,16 @@
 		],
 		"parameters": {
 			"arr": {
-				"type": "string",
+				"type": "array",
 				"defaultValue": "[\"Orders\",\"Stores\",\"TaxRates\"]]"
+			}
+		},
+		"variables": {
+			"arr": {
+				"type": "Array",
+				"defaultValue": [
+					"[\"Orders\",\"Stores\",\"TaxRates\"]]"
+				]
 			}
 		},
 		"annotations": []
