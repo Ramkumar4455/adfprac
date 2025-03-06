@@ -52,6 +52,9 @@
 		},
 		"AzureSqlDatabase3_properties_typeProperties_userName": {
 			"value": "Ramkumar4455"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com/users"
 		}
 	}
 }
