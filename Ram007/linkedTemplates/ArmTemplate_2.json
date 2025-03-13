@@ -600,7 +600,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "country-region"
+					"table": "COUNTRYREGION"
 				}
 			},
 			"dependsOn": [
@@ -806,7 +806,8 @@
 						"defaultValue": [
 							"CUSTOMERS",
 							"PRODUCTS",
-							"TRANSACTION"
+							"TRANSACTION",
+							"COUNTRYREGION"
 						]
 					}
 				},
