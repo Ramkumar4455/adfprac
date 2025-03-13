@@ -20,7 +20,19 @@
 		"AzureSqlDatabase3_password": {
 			"value": ""
 		},
+		"Snowflake1_password": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"SqlServer2_password": {
+			"value": ""
+		},
 		"Wedconnec_connectionString": {
+			"value": ""
+		},
+		"linkedService1_connectionString": {
 			"value": ""
 		},
 		"simpleforeachblobstorage_connectionString": {
@@ -55,6 +67,33 @@
 		},
 		"HttpServer1_properties_typeProperties_url": {
 			"value": "https://jsonplaceholder.typicode.com/users"
+		},
+		"Snowflake1_properties_typeProperties_database": {
+			"value": "DEMINIPROJECT"
+		},
+		"Snowflake1_properties_typeProperties_role": {
+			"value": "ACCOUNTADMIN"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"value": "JM-DKT-032"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"value": "DEMiniProject"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "AzureAD\\RamkumarSS"
+		},
+		"SqlServer2_properties_typeProperties_server": {
+			"value": "JM-DKT-032"
+		},
+		"SqlServer2_properties_typeProperties_database": {
+			"value": "DEMiniProject"
+		},
+		"SqlServer2_properties_typeProperties_userName": {
+			"value": "AzureAD\\RamkumarSS"
+		},
+		"linkedService2_sasUri": {
+			"value": ""
 		}
 	}
 }

@@ -27,9 +27,25 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase3'"
 		},
+		"Snowflake1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Snowflake1'"
+		},
+		"SqlServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer1'"
+		},
+		"SqlServer2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer2'"
+		},
 		"Wedconnec_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Wedconnec'"
+		},
+		"linkedService1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linkedService1'"
 		},
 		"simpleforeachblobstorage_connectionString": {
 			"type": "secureString",
@@ -75,6 +91,42 @@
 			"type": "string",
 			"defaultValue": "https://jsonplaceholder.typicode.com/users"
 		},
+		"Snowflake1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "DEMINIPROJECT"
+		},
+		"Snowflake1_properties_typeProperties_role": {
+			"type": "string",
+			"defaultValue": "ACCOUNTADMIN"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JM-DKT-032"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "DEMiniProject"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "AzureAD\\RamkumarSS"
+		},
+		"SqlServer2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JM-DKT-032"
+		},
+		"SqlServer2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "DEMiniProject"
+		},
+		"SqlServer2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "AzureAD\\RamkumarSS"
+		},
+		"linkedService2_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'linkedService2'"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -117,6 +169,9 @@
 					"AzureSqlDatabase3_password": {
 						"value": "[parameters('AzureSqlDatabase3_password')]"
 					},
+					"Snowflake1_password": {
+						"value": "[parameters('Snowflake1_password')]"
+					},
 					"Wedconnec_connectionString": {
 						"value": "[parameters('Wedconnec_connectionString')]"
 					},
@@ -152,6 +207,12 @@
 					},
 					"HttpServer1_properties_typeProperties_url": {
 						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
+					},
+					"Snowflake1_properties_typeProperties_database": {
+						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
+					},
+					"Snowflake1_properties_typeProperties_role": {
+						"value": "[parameters('Snowflake1_properties_typeProperties_role')]"
 					}
 				}
 			},
@@ -170,11 +231,61 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"SqlServer1_password": {
+						"value": "[parameters('SqlServer1_password')]"
+					},
+					"SqlServer2_password": {
+						"value": "[parameters('SqlServer2_password')]"
+					},
+					"linkedService1_connectionString": {
+						"value": "[parameters('linkedService1_connectionString')]"
+					},
+					"SqlServer1_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_server')]"
+					},
+					"SqlServer1_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_database')]"
+					},
+					"SqlServer1_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
+					},
+					"SqlServer2_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer2_properties_typeProperties_server')]"
+					},
+					"SqlServer2_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer2_properties_typeProperties_database')]"
+					},
+					"SqlServer2_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer2_properties_typeProperties_userName')]"
 					}
 				}
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'Ram007_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "Ram007_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"linkedService2_sasUri": {
+						"value": "[parameters('linkedService2_sasUri')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'Ram007_ArmTemplate_1')]"
 			]
 		}
 	]
