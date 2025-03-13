@@ -163,7 +163,8 @@
 				"defaultValue": [
 					"CUSTOMERS",
 					"PRODUCTS",
-					"TRANSACTION"
+					"TRANSACTION",
+					"COUNTRYREGION"
 				]
 			}
 		},
